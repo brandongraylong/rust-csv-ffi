@@ -1,0 +1,17 @@
+[package]
+name = "csv_ffi"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+name = "csv_ffi"
+crate-type = ["staticlib"]  
+
+[build-dependencies]
+cbindgen = "0.24"
+
+[dependencies]
+libc = "0.2"
+csv = { git = "https://github.com/brandongraylong/rust-csv.git" }
